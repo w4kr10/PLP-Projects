@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enhancing HTML5 Content & Mastering Forms</title>
+</head>
+<body>
+
+  <header>
+    <h1>Enhancing HTML5 Content & Mastering Forms</h1>
+    <p>A demonstration of HTML5 features: lists, tables, media, and forms</p>
+  </header>
+
+  <!-- Deliverable 1: Lists -->
+    <h2>Definition List</h2>
+    <h3>Web Design Specialization</h3>
+    <d1>
+        <dt>Full Stack Developer</dt>
+        <dd>Mastered both server side and front end side in web development</dd>
+        <dt>Front-End Developer</dt>
+        <dd>Professional in developing the user interface of a website, specifcally what is show to users.</dd>
+        <dt>Back-end Developer</dt>
+        <dd>Professional in developing the server side parts of a website</dd>
+    </d1>
+    <h2>Nested Lists</h2>
+    <ol type="1">Web Design and Developemnt Languages
+      <li>Core Languages
+        <ul>
+          <li>HTML5</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </li>
+
+    <li>Other Languages</li>
+    <p>These support core web development technologies</p>
+    <ol type="i">
+      <li>Python</li>
+      <li>Ruby</li>
+      <li>Java</li>
+      <li>PHP</li>
+      <li>Node JS</li>
+    </ol>
+  </ol>
+
+  <!-- Deliverable 2: Table -->
+    <h2>Comparison of Web Browsers</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Browser</th>
+          <th>Developer</th>
+          <th>Release Year</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Google Chrome</td>
+          <td>Google</td>
+          <td>2008</td>
+        </tr>
+        <tr>
+          <td>Safari</td>
+          <td>Apple</td>
+          <td>2003</td>
+        </tr>
+        <tr>
+          <td>Firefox</td>
+          <td>Mozilla</td>
+          <td>2004</td>
+        </tr>
+        <tr>
+          <td>Microsoft Edge</td>
+          <td>Microsoft</td>
+          <td>2015</td>
+      </tbody>
+    </table>
+
+  <!-- Deliverable 3: Media -->
+  <section>
+    <h2>Multimedia</h2>
+    <h3>Image</h3>
+    <img src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" alt="Web Design Concept" width="200" height="200">
+    <h3>Audio</h3>
+    <audio controls>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <h3>Video<h3>
+      <video width="320" height="320" controls>
+        <source src="https://videos.pexels.com/video-files/30837581/13187381_2560_1440_50fps.mp4" type="video/mp4">
+        <video>
+  </section>
+
+  <!-- Deliverable 4: HTML5 Form -->
+
+  <section class="form-section">
+    <h2>User Registration Form</h2>
+    <form action="#" method="post">
+      
+      <!-- Personal Information Fieldset -->
+      <fieldset>
+        <legend>Personal Information</legend>
+        
+        <div class="form-group">
+          <label for="fullname">Full Name *</label>
+          <input 
+            type="text" 
+            id="fullname" 
+            name="fullname" 
+            required 
+            minlength="2" 
+            maxlength="100"
+            placeholder="Enter your full name"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            required 
+            placeholder="you@example.com"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input 
+            type="tel" 
+            id="phone" 
+            name="phone" 
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            placeholder="123-456-7890"
+          />
+          <small>Format: 123-456-7890</small>
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input 
+            type="date" 
+            id="dob" 
+            name="dob" 
+            max="2005-12-31"
+            min="1900-01-01"
+          />
+        </div>
+      </fieldset>
+
+      <!-- Account Preferences Fieldset -->
+      <fieldset>
+        <legend>Account Preferences</legend>
+
+        <div class="form-group">
+          <label for="username">Username *</label>
+          <input 
+            type="text" 
+            id="username" 
+            name="username" 
+            required 
+            minlength="3" 
+            maxlength="20"
+            pattern="[a-zA-Z0-9_]+"
+            placeholder="letters, numbers, underscore only"
+          />
+          <small>Must be 3–20 characters, letters, numbers, and underscores only.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password *</label>
+          <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            required 
+            minlength="8"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            placeholder="At least 8 characters with uppercase, lowercase, and number"
+          />
+          <small>Min 8 chars, must include uppercase, lowercase, and a number.</small>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password *</label>
+          <input 
+            type="password" 
+            id="confirmPassword" 
+            name="confirmPassword" 
+            required
+            minlength="8"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="">-- Select Country --</option>
+            <option value="us">United States</option>
+            <option value="ca">Canada</option>
+            <option value="uk">United Kingdom</option>
+            <option value="au">Australia</option>
+            <option value="de">Germany</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <!-- Interests Fieldset -->
+      <fieldset>
+        <legend>Interests (Optional)</legend>
+        <p>Select your areas of interest:</p>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" name="interests" value="frontend"> Frontend Development
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" name="interests" value="backend"> Backend Development
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" name="interests" value="design"> Web Design
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" name="interests" value="mobile"> Mobile Development
+          </label>
+        </div>
+      </fieldset>
+
+
+
+      <!-- Submit Button -->
+      <button type="submit">Register Account</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Web Development Showcase. All rights reserved.</p>
+    <p>Demonstrating HTML5 structure, media, and accessible forms.</p>
+  </footer>
+
+</body>
+</html>
